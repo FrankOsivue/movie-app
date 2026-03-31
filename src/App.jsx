@@ -1,6 +1,7 @@
 import { useEffect, useState } from 'react';
 import Search from './components/Search';
 import Spinner from './components/Spinner';
+import Moviecard from './components/Moviecard';
 
 const API_BASE_URL = 'https://api.themoviedb.org/3';
 const API_KEY = import.meta.env.VITE_TMDB_API_KEY;
@@ -78,13 +79,10 @@ const App = () => {
           ) : (
             <ul>
               {movieList.map((movie) => (
-                <p
+                <Moviecard
                   key={movie.id}
-                  className='text-white'
-                >
-                  {' '}
-                  {movie.title}
-                </p>
+                  movie={movie}
+                />
               ))}
             </ul>
           )}
