@@ -61,8 +61,8 @@ const App = () => {
               src='./hero.png'
               alt='hero banner'
             />
-            Find <span className='text-gradient'>Movies</span> you will enjoy
-            without the hassle
+            Find most <span className='text-gradient'>trending Movies</span>{' '}
+            people are watching now
           </h1>
           <Search
             searchTerm={searchTerm}
