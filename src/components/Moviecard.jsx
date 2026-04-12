@@ -9,7 +9,7 @@ const Moviecard = ({
         src={
           poster_path
             ? `https://image.tmdb.org/t/p/w500${poster_path}`
-            : '/no-movie.png'
+            : 'public\no-movie.png'
         }
         alt={title}
       />
@@ -18,10 +18,17 @@ const Moviecard = ({
         <div className='content'>
           <div className='rating'>
             <img
-              src='public\star.svg'
-              alt=''
+              src='\star.svg'
+              alt='star icon'
             />
+            <p>{vote_average ? vote_average.toFixed(1) : 'N/A'}</p>
           </div>
+          <span>●</span>
+          <p className='lang'>{original_language}</p>
+          <span>●</span>
+          <p className='year'>
+            {release_date ? new Date(release_date).getFullYear() : 'N/A'}
+          </p>
         </div>
       </div>
     </div>
